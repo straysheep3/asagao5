@@ -1,24 +1,36 @@
-# README
+# 練習問題
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**[A]**
+空欄の中に適切な語句を記入して下さい。
 
-Things you may want to cover:
+- 記事の投稿など、サーバーの状態を変更するときには、HTTPの◯◯メソッドで送信します。
+- redirect_toメソッドを使うと、ブラウザーに新しいURLを示して別のページへの◯◯を行うことができます。
+- routes.rbを編集すると、URLのパスから特定のアクションを選ぶ◯◯の設定を変更できます。
 
-* Ruby version
+1. **POST**
+2. リダイレクション
+3. ルーティング
 
-* System dependencies
+**[B]**
+routes.rbに「get "about" => "top#about", as: "about"」という設定をしたとします。テンプレートの中で、TopControllerのaboutアクションへのリンクを作成してください。リンクのテキストは「このサイトについて」としてください。
 
-* Configuration
+```html
+<p><%= link_to "このサイトについて", about_path %></p>
+```
 
-* Database creation
+**[C]**
+テンプレートの中で、配列@countriesの中身をHTMLのリストに並べて表示させてください。
 
-* Database initialization
+**アクション**
+```ruby
+@countries = ["イタリア", "フランス", "ドイツ"]
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**テンプレート**
+```html
+<ul>
+	<% @countries.each do |country| %>
+	<li><%= country %></li>
+	<% end %>
+</ul>
+```

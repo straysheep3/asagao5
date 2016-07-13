@@ -1,24 +1,42 @@
-# README
+# 練習問題
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**[A]**
+次の空欄を埋め、入力した数値に消費税を加えた値を表示してください。小数点以下を切り落とすには、数値オブジェクトのto_iメソッドを使います。なお、消費税率は8%とします。
 
-Things you may want to cover:
+```ruby
+print = "価格を入力してください: "
+price = gets.chomp
+price = ◯◯
+puts "税込み#{price}円です。"
+```
 
-* Ruby version
+**price = ( price.to_i * 1.08 ).to_i**
 
-* System dependencies
+**[B]**
+配列flowersの要素を１つずつ表示するプログラムを書いて下さい。
 
-* Configuration
+```ruby
+flowers = ["carnation", "tulip", "cosmos"]
+flowers.each do |flower|
+  puts flower
+end
+```
 
-* Database creation
+**[C]**
+空欄を埋めて、属性を取り出すアクセサメソッドをBookクラスに加えてください。
 
-* Database initialization
+```ruby
+class Book
+	◯◯
+	def initialize(title, author, price)
+	  @title = title
+		@author = author
+		@price = price
+	end
+end
 
-* How to run the test suite
+book1 = Book.new("彼岸過迄", "夏目漱石", 540)
+puts "#{book1.title}、 #{book1.author}著、#{book1.price}円"
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**attr_accessor :title, :author, :price**

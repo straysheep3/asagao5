@@ -173,3 +173,10 @@ table.attr th {
 table.list td, table.attr td {
   background-color: #cee;
 }
+
+/* フラッシュ */
+p.notice {
+  border: 1px solid blue;
+  padding: 3px;
+  background-color: #ccf;
+}

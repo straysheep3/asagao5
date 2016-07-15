@@ -1,6 +1,6 @@
 class TopController < ApplicationController
   def index
-    # code
+    @articles = Article.open.order(released_at: :desc).limit(5)
   end
 
 	def about

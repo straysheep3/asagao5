@@ -1,5 +1,7 @@
+# coding: utf-8
 class Member < ApplicationRecord
   include EmailAddressChecker
+  attr_accessor :password, :password_confirmation
   # 背番号は空は禁止
   validates :number, presence: true,
     # 整数であること
